@@ -2,7 +2,13 @@
 
 Garry Tan's [gstack](https://github.com/garrytan/gstack) factory, redesigned so **Grok** can actually run it.
 
-The original installs into `~/.claude/skills` and is invoked as Claude Code slash commands (`/office-hours`, `/ship`, …). Grok does not load those. This port is Grok skills: YAML frontmatter, trigger text, tools Grok has.
+## About
+
+A lot of us — including me — prefer Grok to Claude for the work that matters.
+
+Claude is a careful intern with a thick policy manual. Grok is the partner you can hand a messy house, a live product, and a GitHub org. It will search the live web and X, write the engine, click through the preview, and push the repo — in one session. You do not need Anthropic's IDE, a bun installer, Chrome MCP, or twenty-three slash commands glued to `~/.claude`. The solutions are already in the model: code, review, browser QA, data, images, the public internet.
+
+That is why this repo exists. gstack's factory is good (office hours, CEO/eng review, spec, investigate, ship). Its **host** is Claude-only. People who already work in Grok were being told to switch runtimes to get a process. We ported the process. Same jobs. Tools Grok already has. No Claude Code.
 
 Not affiliated with YC. Methodology is gstack's (MIT). The host is new.
 
