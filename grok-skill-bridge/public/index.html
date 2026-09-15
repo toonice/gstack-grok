@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Turn useful GitHub repositories into reusable Grok skills. Free, open source, local-first.">
+<title>Grok Skill Bridge</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app-shell">
+  <header class="topbar">
+    <div class="brand"><div class="brand-mark">⚡</div><div><strong>Grok Skill Bridge</strong><span>GitHub → Grok capabilities</span></div></div>
+    <div class="top-actions"><a href="https://github.com/" target="_blank" rel="noreferrer">GitHub ↗</a><button id="demoBtn" class="ghost">✨ Try demo</button></div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="pill">🧩 OPEN SOURCE · FREE · LOCAL-FIRST</div>
+      <h1>Give Grok <span>new skills.</span><br>Not another chatbot.</h1>
+      <p>Paste a GitHub repository. Skill Bridge analyses what it does, spots agent-specific pieces, and generates a clean Grok-compatible skill you can review and install.</p>
+      <div class="input-card">
+        <label for="repoUrl">GitHub repository</label>
+        <div class="input-row"><input id="repoUrl" placeholder="https://github.com/owner/repository" autocomplete="off"><button id="analyzeBtn">Analyse repo <span>→</span></button></div>
+        <div class="hint"><span>🔒 Public repos work without a key.</span><span>•</span><span>Private repos: use your own GitHub access.</span></div>
+      </div>
+    </section>
+
+    <section id="workspace" class="workspace hidden">
+      <div class="workspace-head"><div><span class="eyebrow">ANALYSIS</span><h2 id="repoTitle">Repository</h2><p id="repoDesc">Analysing repository structure…</p></div><div id="compat" class="score">—</div></div>
+      <div class="grid">
+        <article class="panel"><div class="panel-title">🔎 What we found</div><div id="findings" class="finding-list"></div></article>
+        <article class="panel"><div class="panel-title">🛠️ Grok adaptation</div><div id="adaptation" class="finding-list"></div></article>
+      </div>
+      <div class="panel skill-preview"><div class="panel-title"><span>📄 Generated SKILL.md</span><button id="copyBtn" class="mini">Copy</button></div><pre id="skillOutput"></pre></div>
+      <div class="workspace-actions"><button id="downloadBtn" class="primary">⬇ Download skill</button><button id="resetBtn" class="ghost">Analyse another repo</button></div>
+      <div class="notice">⚠️ Review the repository licence and generated instructions before using third-party code.</div>
+    </section>
+
+    <section class="how">
+      <div class="section-heading"><span class="eyebrow">HOW IT WORKS</span><h2>From GitHub repo to Grok skill in minutes.</h2></div>
+      <div class="steps">
+        <div class="step"><b>01</b><div><h3>Paste a repo</h3><p>Give it a public GitHub URL. No account with us. No upload to our servers.</p></div></div>
+        <div class="step"><b>02</b><div><h3>Understand the capability</h3><p>Inspect documentation, manifests, skills, MCP metadata and project structure.</p></div></div>
+        <div class="step"><b>03</b><div><h3>Bridge it to Grok</h3><p>Generate a portable <code>SKILL.md</code> for Grok's skill system.</p></div></div>
+      </div>
+    </section>
+  </main>
+  <footer><span>⚡ Grok Skill Bridge</span><span>MIT License · Built in public</span></footer>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
