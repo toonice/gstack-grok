@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+assert.ok(fs.existsSync('public/index.html'));
+assert.ok(fs.existsSync('public/app.js'));
+assert.ok(fs.existsSync('public/styles.css'));
+assert.ok(fs.existsSync('.grok/skills/skill-bridge/SKILL.md'));
+const html=fs.readFileSync('public/index.html','utf8');
+assert.match(html,/Grok Skill Bridge/);
+assert.match(html,/demoBtn/);
+console.log('✓ Grok Skill Bridge smoke tests passed');
